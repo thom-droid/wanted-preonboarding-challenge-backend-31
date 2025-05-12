@@ -46,9 +46,11 @@ public class Category {
     @Column(name = "image_url")
     private String imageUrl;
 
+    @Builder.Default
     @OneToMany(mappedBy = "parent")
     private List<Category> categories = new ArrayList<>();
 
+    @Builder.Default
     @OneToMany(mappedBy = "category")
     private List<ProductCategory> productCategories = new ArrayList<>();
 

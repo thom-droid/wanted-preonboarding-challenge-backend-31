@@ -13,3 +13,4 @@ spring:
     init:
       mode: always
       schema-locations: classpath:ddl.sql
+      data-locations: classpath:data/

@@ -7,7 +7,9 @@ import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 @Builder
@@ -36,7 +38,8 @@ public class ProductOptionGroup {
     @Column(name = "display_order")
     private Integer displayOrder;
 
+    @Builder.Default
     @OneToMany(mappedBy = "optionGroup")
-    private Set<ProductOption> productOptions = new LinkedHashSet<>();
+    private List<ProductOption> productOptions = new ArrayList<>();
 
 }
