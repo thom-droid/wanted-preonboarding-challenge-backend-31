@@ -7,6 +7,7 @@ import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class ProductOption {
     private String name;
 
     @Column(name = "additional_price", precision = 12, scale = 2)
-    private Double additionalPrice;
+    private BigDecimal additionalPrice;
 
     @Size(max = 100)
     @Column(name = "sku", length = 100)

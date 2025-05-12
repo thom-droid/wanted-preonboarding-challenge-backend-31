@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.example.cqrs.product.entity.Product;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,7 @@ public class Seller {
     private String logoUrl;
 
     @Column(name = "rating", precision = 3, scale = 2)
-    private double rating;
+    private BigDecimal rating;
 
     @Column(name = "contact_email", length = 100)
     private String contactEmail;

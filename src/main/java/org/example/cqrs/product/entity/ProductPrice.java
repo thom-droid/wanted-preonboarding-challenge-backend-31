@@ -7,6 +7,8 @@ import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.math.BigDecimal;
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -27,19 +29,19 @@ public class ProductPrice {
 
     @NotNull
     @Column(name = "base_price", nullable = false, precision = 12, scale = 2)
-    private Double basePrice;
+    private BigDecimal basePrice;
 
     @Column(name = "sale_price", precision = 12, scale = 2)
-    private Double salePrice;
+    private BigDecimal salePrice;
 
     @Column(name = "cost_price", precision = 12, scale = 2)
-    private Double costPrice;
+    private BigDecimal costPrice;
 
     @Size(max = 3)
     @Column(name = "currency", length = 3)
     private String currency;
 
     @Column(name = "tax_rate", precision = 5, scale = 2)
-    private Double taxRate;
+    private BigDecimal taxRate;
 
 }
