@@ -1,5 +1,7 @@
 package org.example.cqrs.core.response;
 
+import org.example.cqrs.core.code.Response;
+
 import java.util.List;
 
 public record PaginationResponse<T>(boolean success, PaginatedData<T> data, String message) {

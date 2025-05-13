@@ -1,9 +1,10 @@
-package org.example.cqrs.product.entity;
+package org.example.cqrs.tag.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
+import org.example.cqrs.product.entity.ProductTag;
 
 import java.util.ArrayList;
 import java.util.List;

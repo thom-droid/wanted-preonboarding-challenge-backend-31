@@ -23,11 +23,15 @@ public class ProductRepositoryTest {
     }
 
     @Test
-    public void findById() {
+    public void findAll() {
         List<Product> all =
                 productRepository.findAll();
 
         Assertions.assertFalse(all.isEmpty());
+
+        all.forEach(p -> {
+
+        });
 
     }
 }

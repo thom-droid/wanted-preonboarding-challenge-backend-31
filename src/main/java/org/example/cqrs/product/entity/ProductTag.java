@@ -2,6 +2,7 @@ package org.example.cqrs.product.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.example.cqrs.tag.entity.Tag;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 

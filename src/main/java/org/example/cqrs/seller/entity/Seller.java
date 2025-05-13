@@ -41,10 +41,16 @@ public class Seller {
     private String contactPhone;
 
     @Builder.Default
-    @OneToMany(mappedBy = "seller", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "seller", fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Product> products = new ArrayList<>();
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    public void addProduct(Product product) {
+        if (product != null) {
+            product.setSeller(this);
+            this.products.add(product);
+        }
+    }
 }

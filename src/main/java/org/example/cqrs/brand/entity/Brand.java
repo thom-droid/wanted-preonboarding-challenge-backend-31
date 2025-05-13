@@ -3,13 +3,15 @@ package org.example.cqrs.brand.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.example.cqrs.product.entity.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -41,6 +43,7 @@ public class Brand {
     @Column(name = "website")
     private String website;
 
+    @Builder.Default
     @OneToMany(mappedBy = "brand")
     private List<Product> products = new ArrayList<>();
 

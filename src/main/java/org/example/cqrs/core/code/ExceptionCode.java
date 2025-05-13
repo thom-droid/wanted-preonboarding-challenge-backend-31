@@ -1,4 +1,4 @@
-package org.example.cqrs.core.exception;
+package org.example.cqrs.core.code;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +19,5 @@ public enum ExceptionCode {
     final int code;
     final String message;
     final HttpStatus httpStatus;
-
 
 }

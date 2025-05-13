@@ -1,7 +1,7 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/cqrs
-    username: thomhs
+    username: test
     password: 1111
     driver-class-name: org.postgresql.Driver
   jpa:
@@ -13,3 +13,5 @@ spring:
       hibernate:
         format_sql: true
         use_sql_comments: true
+file:
+  upload-dir: /tmp/uploads

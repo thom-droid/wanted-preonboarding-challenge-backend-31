@@ -1,8 +1,7 @@
 package org.example.cqrs.core.response;
 
 import lombok.Builder;
-
-import java.util.List;
+import org.example.cqrs.core.code.Response;
 
 @Builder
 public record ApiResponse<T>(boolean success, T data, String message) {

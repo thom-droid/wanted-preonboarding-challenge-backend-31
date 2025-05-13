@@ -1,7 +1,7 @@
 package org.example.cqrs.core.response;
 
 import org.example.cqrs.core.exception.ApiException;
-import org.example.cqrs.core.exception.ExceptionCode;
+import org.example.cqrs.core.code.ExceptionCode;
 
 import java.util.Map;
 
@@ -17,7 +17,7 @@ public record ErrorResponse(boolean success, ErrorDetail error) {
 
     public static ErrorResponse of(ApiException apiException) {
         ExceptionCode code = apiException.getCode();
-        return of(new ErrorDetail(code.getCode(), code.getMessage(), apiException.getDetails()));
+        return of(new ErrorDetail(code.getCode(), apiException.getMessage(), apiException.getDetails()));
     }
 
     public record ErrorDetail(int code, String message, Map<String, Object> details) {
